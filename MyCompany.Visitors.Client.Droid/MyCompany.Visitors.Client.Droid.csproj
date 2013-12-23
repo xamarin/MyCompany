@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD135851-5E6F-4521-AA33-E9D8C62995FC}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyCompany.Visitors.Client.Droid</RootNamespace>
+    <AssemblyName>MyCompany.Visitors.Client.Droid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <JavaMaximumHeapSize />
+    <JavaOptions />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkSkip>
+    </AndroidLinkSkip>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.mobile-0.7\lib\android\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client">
+      <HintPath>..\SharedCode\packages\signalr-2.0.0\lib\mobile\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\SharedCode\packages\signalr-2.0.0\lib\mobile\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\SharedCode\packages\signalr-2.0.0\lib\mobile\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Android">
+      <HintPath>..\SharedCode\packages\MvvmLightLibs.4.1.27.0\lib\Android\GalaSoft.MvvmLight.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\MyCompany.Visitors.Client.iOS\ViewModels\VisitsGroup.cs">
+      <Link>ViewModels\VisitsGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\MyCompany.Visitors.Client.iOS\ViewModels\VMBase.cs">
+      <Link>ViewModels\VMBase.cs</Link>
+    </Compile>
+    <Compile Include="..\MyCompany.Visitors.Client.iOS\ViewModels\VMEmployee.cs">
+      <Link>ViewModels\VMEmployee.cs</Link>
+    </Compile>
+    <Compile Include="..\MyCompany.Visitors.Client.iOS\ViewModels\VMMainPage.cs">
+      <Link>ViewModels\VMMainPage.cs</Link>
+    </Compile>
+    <Compile Include="..\MyCompany.Visitors.Client.iOS\ViewModels\VMVisit.cs">
+      <Link>ViewModels\VMVisit.cs</Link>
+    </Compile>
+    <Compile Include="..\MyCompany.Visitors.Client.iOS\ViewModels\VMVisitor.cs">
+      <Link>ViewModels\VMVisitor.cs</Link>
+    </Compile>
+    <Compile Include="Activity1.cs" />
+    <Compile Include="Extensions\ImageExtensions.cs" />
+    <Compile Include="Fragments\MainFragment.cs" />
+    <Compile Include="Fragments\OtherVisitFragment.cs" />
+    <Compile Include="Fragments\TodaysVisitsFragment.cs" />
+    <Compile Include="Fragments\VisitViewFragment.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Dispatcher\DispatcherService.cs" />
+    <Compile Include="Services\Dispatcher\IDispatcherService.cs" />
+    <Compile Include="Services\Messages\IMessageService.cs" />
+    <Compile Include="Services\Messages\MessageService.cs" />
+    <Compile Include="Services\Navigation\INavigationService.cs" />
+    <Compile Include="Services\SampleData\ISampleDataService.cs" />
+    <Compile Include="Services\SampleData\SampleDataService.cs" />
+    <Compile Include="Services\Storage\IStorageService.cs" />
+    <Compile Include="Services\Storage\StorageService.cs" />
+    <Compile Include="Settings\AppSettings.cs" />
+    <Compile Include="Theme.cs" />
+    <Compile Include="Views\ImageFader.cs" />
+    <Compile Include="Views\OtherVisitView.cs" />
+    <Compile Include="Views\TallVisitView.cs" />
+    <Compile Include="Views\VisitView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\Layout\VisitView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\BaseLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\TodaysVisitsView.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Settings.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\TallVisitView.axml">
+      <SubType>AndroidResource</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\Main.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\Drawable\icon.png" />
+    <AndroidResource Include="Resources\Drawable\no_photo.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <XamarinComponentReference Include="xamarin.mobile">
+      <Version>0.7</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\SharedCode\MyCompany.Visitors.Client\MyCompany.Visitors.Client.csproj">
+      <Project>{DEF833F3-4D83-494A-848F-A700B3AD933C}</Project>
+      <Name>MyCompany.Visitors.Client</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

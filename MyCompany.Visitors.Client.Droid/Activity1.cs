@@ -1,0 +1,118 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using Android.App;
+using Android.Content;
+using Android.Graphics.Drawables;
+using Android.Media.Audiofx;
+using Android.Preferences;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using Android.OS;
+using MyCompany.Visitors.Client.Droid.Fragments;
+using MyCompany.Visitors.Client.PortableModel;
+using MyCompany.Visitors.Client.ServiceAgents;
+using MyCompany.Visitors.Client.ViewModels;
+using Android.Graphics;
+
+namespace MyCompany.Visitors.Client.Droid
+{
+	[Activity(Label = "Visitors", MainLauncher = true, Icon = "@drawable/icon")]
+	public class Activity1 : Activity
+	{
+		const int ITEMS_TO_RETRIEVE_TODAY = 100;
+		const int ITEMS_TO_RETRIEVE_PAGEZERO = 0;
+		const int TODAY_GROUP_ID = 1;
+		int count = 1;
+		static MyCompanyClient client;
+
+
+		public static MyCompanyClient CompanyClient
+		{
+			get { return client ?? (client = new MyCompanyClient(AppSettings.ApiUri.ToString() + "noauth/", "test")); }
+			set { client = value; }
+		}
+
+		MainFragment mainFragment;
+		protected override void OnCreate(Bundle bundle)
+		{
+			base.OnCreate(bundle);
+			ActionBar.SetBackgroundDrawable(new ColorDrawable(Color.SlateGray));
+			AppSettings.Prefs = GetSharedPreferences("settings", FileCreationMode.Private);
+			Images.Resources = Resources;
+			// Set our view from the "main" layout resource
+			SetContentView(Resource.Layout.BaseLayout);
+			FragmentManager.BeginTransaction().Replace(Resource.Id.mainFragment, mainFragment = new MainFragment()
+			{
+				Model = new VMMainPage(),
+			}).Commit();
+			mainFragment.Model.InitializeData();
+			// Get our button from the layout resource,
+			// and attach an event to it
+			//Button button = FindViewById<Button>(Resource.Id.MyButton);
+
+			//button.Click += async delegate
+			//{
+			//	IList<Visit> todayResults =
+			//  await
+			//	  CompanyClient.VisitService.GetVisits(string.Empty, PictureType.Big,
+			//		  ITEMS_TO_RETRIEVE_TODAY, ITEMS_TO_RETRIEVE_PAGEZERO, DateTime.Today.ToUniversalTime(), null);
+			//	Visit nextVisit = todayResults.FirstOrDefault(v => v.VisitDateTime >= DateTime.Now.ToUniversalTime());
+			//	button.Text = string.Format("{0} clicks!", todayResults.Count);
+			//};
+		}
+
+		public override bool OnCreateOptionsMenu(IMenu menu)
+		{
+			menu.Add(0, 0, 0, "Add Visit");
+			menu.Add(0, 1, 1, "Settings");
+			return true;
+			//return base.OnCreateOptionsMenu(menu);
+		}
+
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			switch (item.ItemId)
+			{
+				case 0:
+					return true;
+				case 1:
+					ShowDialog(1);
+					return true;
+			}
+			return base.OnOptionsItemSelected(item);
+		}
+
+
+		protected override Dialog OnCreateDialog(int id)
+		{
+			if (id == 1)
+			{
+				var factory = LayoutInflater.From(this);
+				var text_entry_view = factory.Inflate(Resource.Layout.Settings, null);
+
+				var serverEdit = text_entry_view.FindViewById<EditText>(Resource.Id.server);
+				serverEdit.Text = AppSettings.ApiUri.AbsoluteUri;
+
+				var builder = new AlertDialog.Builder(this);
+				builder.SetIconAttribute(Android.Resource.Attribute.AlertDialogIcon);
+				builder.SetTitle("Settings");
+				builder.SetView(text_entry_view);
+				builder.SetPositiveButton("Save", (sender, args) =>
+				{
+					AppSettings.ApiUri = new Uri(serverEdit.Text);
+				});
+				builder.SetNegativeButton("Cancel", (sender, args) =>
+				{
+
+				});
+
+				return builder.Create();
+			}
+			return base.OnCreateDialog(id);
+		}
+	}
+}
+
