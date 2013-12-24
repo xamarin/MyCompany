@@ -133,6 +133,21 @@
     <BundleResource Include="Resources\Icon-Small-40%402x.png" />
     <BundleResource Include="Resources\Default-Landscape.png" />
     <BundleResource Include="Resources\Default-Landscape%402x.png" />
+    <BundleResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\hubBackground.png">
+      <Link>Resources\hubBackground.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\logo_mainhub.png">
+      <Link>Resources\logo_mainhub.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo.png">
+      <Link>Resources\no_photo.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo_big.png">
+      <Link>Resources\no_photo_big.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo2_big.png">
+      <Link>Resources\no_photo2_big.png</Link>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoTouch.Dialog-1" />
@@ -160,26 +175,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="..\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo.png">
-      <Link>Resources\no_photo.png</Link>
-    </BundleResource>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="..\MyCompany.Visitors.Client.WindowsStore\Assets\hubBackground.png">
-      <Link>Resources\hubBackground.png</Link>
-    </BundleResource>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="..\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo_big.png">
-      <Link>Resources\no_photo_big.png</Link>
-    </BundleResource>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="..\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo2_big.png">
-      <Link>Resources\no_photo2_big.png</Link>
-    </BundleResource>
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\bar-left-back.png" />
   </ItemGroup>
   <ItemGroup>
@@ -196,11 +191,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\background%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="..\MyCompany.Visitors.Client.WindowsStore\Assets\logo_mainhub.png">
-      <Link>Resources\logo_mainhub.png</Link>
-    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\just-in.png" />
