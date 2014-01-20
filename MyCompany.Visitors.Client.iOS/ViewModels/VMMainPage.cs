@@ -4,9 +4,12 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.SignalR.Client;
+using MyCompany.Visitors.Client.DocumentResponse;
 using MyCompany.Visitors.Client.Model;
 using MyCompany.Visitors.Client.ViewModel.Base;
+#if __IOS__
 using MyCompany.Visitors.Client.DocumentResponse;
+#endif
 
 namespace MyCompany.Visitors.Client.ViewModels
 {

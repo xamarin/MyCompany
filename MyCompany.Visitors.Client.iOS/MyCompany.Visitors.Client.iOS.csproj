@@ -89,16 +89,16 @@
     <Compile Include="Extensions\ViewExtensions.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Services\Dispatcher\DispatcherService.cs" />
-    <Compile Include="Services\Dispatcher\IDispatcherService.cs" />
-    <Compile Include="Services\Messages\IMessageService.cs" />
-    <Compile Include="Services\Messages\MessageService.cs" />
-    <Compile Include="Services\Navigation\INavigationService.cs" />
-    <BundleResource Include="Services\Notifications\NotificationService.cs" />
-    <Compile Include="Services\SampleData\ISampleDataService.cs" />
-    <Compile Include="Services\SampleData\SampleDataService.cs" />
-    <Compile Include="Services\Storage\IStorageService.cs" />
-    <Compile Include="Services\Storage\StorageService.cs" />
+    <Compile Include="Settings\Services\Dispatcher\DispatcherService.cs" />
+    <Compile Include="Settings\Services\Dispatcher\IDispatcherService.cs" />
+    <Compile Include="Settings\Services\Messages\IMessageService.cs" />
+    <Compile Include="Settings\Services\Messages\MessageService.cs" />
+    <Compile Include="Settings\Services\Navigation\INavigationService.cs" />
+    <BundleResource Include="Settings\Services\Notifications\NotificationService.cs" />
+    <Compile Include="Settings\Services\SampleData\ISampleDataService.cs" />
+    <Compile Include="Settings\Services\SampleData\SampleDataService.cs" />
+    <Compile Include="Settings\Services\Storage\IStorageService.cs" />
+    <Compile Include="Settings\Services\Storage\StorageService.cs" />
     <Compile Include="Settings\AppSettings.cs" />
     <Compile Include="ViewControllers\EditVisitorViewController.cs" />
     <Compile Include="ViewControllers\EmployeePickerViewController.cs" />
@@ -158,9 +158,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="Xamarin.Mobile">
-      <HintPath>..\Components\xamarin.mobile-0.7\lib\ios\Xamarin.Mobile.dll</HintPath>
-    </Reference>
     <Reference Include="GalaSoft.MvvmLight.Ios">
       <HintPath>..\SharedCode\packages\MvvmLightLibs.4.1.27.0\lib\iOS\GalaSoft.MvvmLight.Ios.dll</HintPath>
     </Reference>
@@ -172,6 +169,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\SharedCode\packages\signalr-2.0.0\lib\mobile\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.mobile-0.7\lib\ios\Xamarin.Mobile.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -211,7 +211,7 @@
     <BundleResource Include="Resources\avatar-b%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\Authenitcator\" />
+    <Folder Include="Settings\Services\Authenitcator\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.mobile">
@@ -234,12 +234,12 @@
   <ItemGroup>
     <BundleResource Include="Resources\icon-152.png" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
-  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" />
   <ItemGroup>
     <ProjectReference Include="..\SharedCode\MyCompany.Visitors.Client\MyCompany.Visitors.Client.csproj">
       <Project>{DEF833F3-4D83-494A-848F-A700B3AD933C}</Project>
       <Name>MyCompany.Visitors.Client</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" />
 </Project>

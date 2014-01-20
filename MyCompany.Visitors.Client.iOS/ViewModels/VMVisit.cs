@@ -2,8 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using MyCompany.Visitors.Client.ViewModel.Base;
 using MyCompany.Visitors.Client.DocumentResponse;
+using MyCompany.Visitors.Client.ViewModel.Base;
+#if __IOS__
+using MyCompany.Visitors.Client.DocumentResponse;
+#endif
 
 namespace MyCompany.Visitors.Client.Model
 {
