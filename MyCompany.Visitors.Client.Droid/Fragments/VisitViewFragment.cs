@@ -22,7 +22,8 @@ namespace MyCompany.Visitors.Client.Droid.Fragments
 		{
 			base.OnCreate(savedInstanceState);
 
-			// Create your fragment here
+            RetainInstance = true;
+		    // Create your fragment here
 		}
 		protected FadeImageView image;
 		protected TextView topLabel;

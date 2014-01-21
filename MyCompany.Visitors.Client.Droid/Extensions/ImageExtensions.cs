@@ -10,7 +10,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using MyCompany.Visitors.Client.PortableModel;
 
 namespace MyCompany.Visitors.Client.Droid.Extensions
 {

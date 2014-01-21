@@ -1,5 +1,4 @@
-﻿using MyCompany.Visitors.Client.PortableModel;
-
+﻿
 namespace MyCompany.Visitors.Client.WindowsStore.Services.SampleData
 {
     using System.Collections.Generic;

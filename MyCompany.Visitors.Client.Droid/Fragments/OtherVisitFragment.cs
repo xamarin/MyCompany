@@ -14,7 +14,6 @@ using Android.Views.Animations;
 using Android.Widget;
 using MyCompany.Visitors.Client.Droid.Views;
 using MyCompany.Visitors.Client.Model;
-using MyCompany.Visitors.Client.PortableModel;
 
 namespace MyCompany.Visitors.Client.Droid.Fragments
 {
@@ -23,8 +22,8 @@ namespace MyCompany.Visitors.Client.Droid.Fragments
 		public override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
-
-			// Create your fragment here
+            RetainInstance = true;
+		    // Create your fragment here
 		}
 
 		ObservableCollection<VMVisit> visits = new ObservableCollection<VMVisit>();

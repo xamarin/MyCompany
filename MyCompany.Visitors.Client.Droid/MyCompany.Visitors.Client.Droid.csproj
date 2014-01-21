@@ -44,6 +44,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkSkip />
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -89,6 +93,7 @@
     </Compile>
     <Compile Include="Activity1.cs" />
     <Compile Include="Extensions\ImageExtensions.cs" />
+    <Compile Include="Extensions\RobotoTextView.cs" />
     <Compile Include="Fragments\MainFragment.cs" />
     <Compile Include="Fragments\OtherVisitFragment.cs" />
     <Compile Include="Fragments\TodaysVisitsFragment.cs" />
@@ -112,6 +117,22 @@
     <Compile Include="Views\VisitView.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\fonts\Roboto-Black.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-BlackItalic.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-Bold.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-BoldCondensed.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-BoldCondensedItalic.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-BoldItalic.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-Condensed.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-CondensedItalic.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-Italic.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-Light.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-LightItalic.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-Medium.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-MediumItalic.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-Regular.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-Thin.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-ThinItalic.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\Layout\VisitView.axml">
@@ -130,6 +151,8 @@
       <SubType>AndroidResource</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout-sw600dp-land\Main.axml" />
+    <AndroidResource Include="Resources\layout-sw600dp-land\VisitView.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\Main.axml" />
@@ -141,6 +164,130 @@
     <Content Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\Drawable\icon.png" />
     <AndroidResource Include="Resources\Drawable\no_photo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_bottom_solid_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_solid_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_stacked_solid_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_texture_tile_myvisitor.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_transparent_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_cab_done_default_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_cab_done_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_cab_done_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cab_background_bottom_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cab_background_top_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_content_new.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\list_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\list_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_dropdown_panel_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\progress_bg_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\progress_primary_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\progress_secondary_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spinner_ab_default_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spinner_ab_disabled_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spinner_ab_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spinner_ab_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_selected_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_selected_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_selected_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_unselected_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_unselected_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_unselected_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_bottom_solid_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_solid_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_stacked_solid_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_texture_tile_myvisitor.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_transparent_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_default_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cab_background_bottom_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cab_background_top_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_content_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_dropdown_panel_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_bg_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_primary_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_secondary_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_default_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_disabled_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_bottom_solid_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_solid_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_stacked_solid_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_texture_tile_myvisitor.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_transparent_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_cab_done_default_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_cab_done_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_cab_done_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cab_background_bottom_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cab_background_top_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_content_new.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\list_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\list_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_dropdown_panel_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\progress_bg_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\progress_primary_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\progress_secondary_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_default_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_disabled_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_selected_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_selected_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_selected_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_unselected_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_unselected_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_unselected_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_bottom_solid_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_solid_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_stacked_solid_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_texture_tile_myvisitor.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_transparent_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_cab_done_default_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_cab_done_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_cab_done_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cab_background_bottom_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cab_background_top_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_content_new.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\list_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\list_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_dropdown_panel_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\progress_bg_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\progress_primary_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\progress_secondary_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spinner_ab_default_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spinner_ab_disabled_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spinner_ab_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spinner_ab_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_selected_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_selected_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_selected_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_unselected_focused_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_unselected_myvisitor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_unselected_pressed_myvisitor.9.png" />
+    <AndroidResource Include="Resources\Drawable\progress_horizontal_myvisitor.xml" />
+    <AndroidResource Include="Resources\Drawable\selectable_background_myvisitor.xml" />
+    <AndroidResource Include="Resources\Drawable\spinner_background_ab_myvisitor.xml" />
+    <AndroidResource Include="Resources\Drawable\tab_indicator_ab_myvisitor.xml" />
+    <AndroidResource Include="Resources\Drawable\ab_background_textured_myvisitor.xml" />
+    <AndroidResource Include="Resources\Drawable\background_card.9.png" />
+    <AndroidResource Include="Resources\Drawable\btn_cab_done_myvisitor.xml" />
+    <AndroidResource Include="Resources\menu\menu_main.xml" />
+    <AndroidResource Include="Resources\Values\Styles.xml" />
+    <AndroidResource Include="Resources\Values\styles_myvisitor.xml" />
+    <AndroidResource Include="Resources\Values\attrs.xml" />
+    <AndroidResource Include="Resources\Values\Colors.xml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

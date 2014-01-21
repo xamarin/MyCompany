@@ -12,14 +12,12 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using MyCompany.Visitors.Client.Droid.Fragments;
-using MyCompany.Visitors.Client.PortableModel;
-using MyCompany.Visitors.Client.ServiceAgents;
 using MyCompany.Visitors.Client.ViewModels;
 using Android.Graphics;
 
 namespace MyCompany.Visitors.Client.Droid
 {
-	[Activity(Label = "Visitors", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Visitors", MainLauncher = true, Icon = "@drawable/ic_launcher", Theme = "@style/Theme.Myvisitor")]
 	public class Activity1 : Activity
 	{
 		const int ITEMS_TO_RETRIEVE_TODAY = 100;
@@ -27,6 +25,7 @@ namespace MyCompany.Visitors.Client.Droid
 		const int TODAY_GROUP_ID = 1;
 		int count = 1;
 		static MyCompanyClient client;
+
 
 
 		public static MyCompanyClient CompanyClient
@@ -39,17 +38,18 @@ namespace MyCompany.Visitors.Client.Droid
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
-			ActionBar.SetBackgroundDrawable(new ColorDrawable(Color.SlateGray));
 			AppSettings.Prefs = GetSharedPreferences("settings", FileCreationMode.Private);
 			Images.Resources = Resources;
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.BaseLayout);
-			FragmentManager.BeginTransaction().Replace(Resource.Id.mainFragment, mainFragment = new MainFragment()
-			{
-				Model = new VMMainPage(),
-			}).Commit();
-			mainFragment.Model.InitializeData();
-			// Get our button from the layout resource,
+
+
+		    FragmentManager.BeginTransaction().Replace(Resource.Id.mainFragment, mainFragment = new MainFragment()
+		    {
+		        Model = new VMMainPage(),
+		    }).Commit();
+		    mainFragment.Model.InitializeData();
+		    // Get our button from the layout resource,
 			// and attach an event to it
 			//Button button = FindViewById<Button>(Resource.Id.MyButton);
 
@@ -64,26 +64,24 @@ namespace MyCompany.Visitors.Client.Droid
 			//};
 		}
 
-		public override bool OnCreateOptionsMenu(IMenu menu)
-		{
-			menu.Add(0, 0, 0, "Add Visit");
-			menu.Add(0, 1, 1, "Settings");
-			return true;
-			//return base.OnCreateOptionsMenu(menu);
-		}
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
 
-		public override bool OnOptionsItemSelected(IMenuItem item)
-		{
-			switch (item.ItemId)
-			{
-				case 0:
-					return true;
-				case 1:
-					ShowDialog(1);
-					return true;
-			}
-			return base.OnOptionsItemSelected(item);
-		}
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.menu_add:
+                    return true;
+                case Resource.Id.menu_settings:
+                    ShowDialog(1);
+                    return true;
+            }
+            return base.OnOptionsItemSelected(item);
+        }
 
 
 		protected override Dialog OnCreateDialog(int id)

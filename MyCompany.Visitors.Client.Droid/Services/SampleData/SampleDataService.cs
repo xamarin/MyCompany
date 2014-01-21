@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using MyCompany.Visitors.Client.PortableModel;
+using MyCompany.Visitors.Client.DocumentResponse;
 
 namespace MyCompany.Visitors.Client.WindowsStore.Services.SampleData
 {

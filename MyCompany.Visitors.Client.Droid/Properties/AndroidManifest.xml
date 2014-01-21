@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.mycompany.visitors" android:versionCode="2" android:versionName="2">
 	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
-	<application></application>
+	<application android:label="Visitors" android:icon="@drawable/ic_launcher"></application>
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

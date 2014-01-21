@@ -21,7 +21,7 @@ namespace MyCompany.Visitors.Client.Droid.Fragments
 		public override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
-			RetainInstance = true;
+		    RetainInstance = true;
 		}
 
 		public VMMainPage Model

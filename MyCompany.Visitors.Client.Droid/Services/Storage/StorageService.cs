@@ -1,5 +1,4 @@
-﻿using MyCompany.Visitors.Client.PortableModel;
-
+﻿
 namespace MyCompany.Visitors.Client.WP.Services.Storage
 {
     using System.IO.IsolatedStorage;
