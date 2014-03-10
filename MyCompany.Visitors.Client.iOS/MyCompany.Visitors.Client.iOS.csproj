@@ -36,6 +36,11 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
+    <CodesignProvision>
+    </CodesignProvision>
+    <CodesignEntitlements />
+    <CodesignResourceRules />
+    <CodesignExtraArgs />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,8 +54,11 @@
     <MtouchDebug>true</MtouchDebug>
     <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignProvision>94480D22-A965-4516-B188-569C8400F2A6</CodesignProvision>
-    <CodesignExtraArgs>
-    </CodesignExtraArgs>
+    <CodesignProvision>
+    </CodesignProvision>
+    <CodesignEntitlements />
+    <CodesignResourceRules />
+    <CodesignExtraArgs />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -94,7 +102,7 @@
     <Compile Include="Settings\Services\Messages\IMessageService.cs" />
     <Compile Include="Settings\Services\Messages\MessageService.cs" />
     <Compile Include="Settings\Services\Navigation\INavigationService.cs" />
-    <BundleResource Include="Settings\Services\Notifications\NotificationService.cs" />
+    <Compile Include="Settings\Services\Notifications\NotificationService.cs" />
     <Compile Include="Settings\Services\SampleData\ISampleDataService.cs" />
     <Compile Include="Settings\Services\SampleData\SampleDataService.cs" />
     <Compile Include="Settings\Services\Storage\IStorageService.cs" />
@@ -133,21 +141,21 @@
     <BundleResource Include="Resources\Icon-Small-40%402x.png" />
     <BundleResource Include="Resources\Default-Landscape.png" />
     <BundleResource Include="Resources\Default-Landscape%402x.png" />
-    <BundleResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\hubBackground.png">
-      <Link>Resources\hubBackground.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\logo_mainhub.png">
-      <Link>Resources\logo_mainhub.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo.png">
-      <Link>Resources\no_photo.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo_big.png">
-      <Link>Resources\no_photo_big.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo2_big.png">
-      <Link>Resources\no_photo2_big.png</Link>
-    </BundleResource>
+    <EmbeddedResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\hubBackground.png">
+      <Link>Images\hubBackground.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\logo_mainhub.png">
+      <Link>Images\logo_mainhub.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo.png">
+      <Link>Images\no_photo.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo_big.png">
+      <Link>Images\no_photo_big.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo2_big.png">
+      <Link>Images\no_photo2_big.png</Link>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoTouch.Dialog-1" />
@@ -175,43 +183,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\bar-left-back.png" />
+    <EmbeddedResource Include="Images\bar-left-back.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\bar-left-back%402x.png" />
+    <EmbeddedResource Include="Images\bar-left-back%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\bar-right-back.png" />
+    <EmbeddedResource Include="Images\bar-right-back.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\bar-right-back%402x.png" />
+    <EmbeddedResource Include="Images\bar-right-back%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\background.png" />
+    <EmbeddedResource Include="Images\background.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\background%402x.png" />
+    <EmbeddedResource Include="Images\background%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\just-in.png" />
+    <EmbeddedResource Include="Images\just-in.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\just-in%402x.png" />
+    <EmbeddedResource Include="Images\just-in%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\avatar-a.png" />
+    <EmbeddedResource Include="Images\avatar-a.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\avatar-a%402x.png" />
+    <EmbeddedResource Include="Images\avatar-a%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\avatar-b.png" />
+    <EmbeddedResource Include="Images\avatar-b.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\avatar-b%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Settings\Services\Authenitcator\" />
+    <EmbeddedResource Include="Images\avatar-b%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.mobile">
@@ -226,10 +231,10 @@
     </BundleResource>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\edit.png" />
+    <EmbeddedResource Include="Images\edit.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\edit%402x.png" />
+    <EmbeddedResource Include="Images\edit%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\icon-152.png" />
