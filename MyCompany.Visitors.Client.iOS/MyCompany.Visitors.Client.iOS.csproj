@@ -141,21 +141,6 @@
     <BundleResource Include="Resources\Icon-Small-40%402x.png" />
     <BundleResource Include="Resources\Default-Landscape.png" />
     <BundleResource Include="Resources\Default-Landscape%402x.png" />
-    <EmbeddedResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\hubBackground.png">
-      <Link>Images\hubBackground.png</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\logo_mainhub.png">
-      <Link>Images\logo_mainhub.png</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo.png">
-      <Link>Images\no_photo.png</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo_big.png">
-      <Link>Images\no_photo_big.png</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\SharedCode\MyCompany.Visitors.Client.WindowsStore\Assets\no_photo2_big.png">
-      <Link>Images\no_photo2_big.png</Link>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoTouch.Dialog-1" />
@@ -183,42 +168,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\bar-left-back.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\bar-left-back%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\bar-right-back.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\bar-right-back%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\background%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\just-in.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\just-in%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\avatar-a.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\avatar-a%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\avatar-b.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\avatar-b%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <XamarinComponentReference Include="xamarin.mobile">
       <Version>0.7</Version>
       <Visible>False</Visible>
@@ -231,12 +180,6 @@
     </BundleResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\edit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Images\edit%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\icon-152.png" />
   </ItemGroup>
   <ItemGroup>
@@ -244,6 +187,26 @@
       <Project>{DEF833F3-4D83-494A-848F-A700B3AD933C}</Project>
       <Name>MyCompany.Visitors.Client</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\avatar-a%402x.png" />
+    <BundleResource Include="Resources\avatar-a.png" />
+    <BundleResource Include="Resources\avatar-b%402x.png" />
+    <BundleResource Include="Resources\avatar-b.png" />
+    <BundleResource Include="Resources\background%402x.png" />
+    <BundleResource Include="Resources\background.png" />
+    <BundleResource Include="Resources\bar-left-back%402x.png" />
+    <BundleResource Include="Resources\bar-left-back.png" />
+    <BundleResource Include="Resources\bar-right-back%402x.png" />
+    <BundleResource Include="Resources\bar-right-back.png" />
+    <BundleResource Include="Resources\edit%402x.png" />
+    <BundleResource Include="Resources\edit.png" />
+    <BundleResource Include="Resources\hubBackground.png" />
+    <BundleResource Include="Resources\just-in%402x.png" />
+    <BundleResource Include="Resources\just-in.png" />
+    <BundleResource Include="Resources\no_photo.png" />
+    <BundleResource Include="Resources\no_photo2_big.png" />
+    <BundleResource Include="Resources\no_photo_big.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" />
